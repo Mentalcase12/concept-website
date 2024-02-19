@@ -1,73 +1,75 @@
-// JavaScript code to add functionality to the HTML and CSS
-
-// Functionality for toggling sidebar
-const toggleSidebar = () => {
-  const sidebar = document.querySelector('.aside');
-  sidebar.classList.toggle('active');
+// Function to toggle dark mode
+function toggleDarkMode() {
+    const body = document.body;
+    body.classList.toggle('dark-mode');
 }
 
-// Functionality for search box
-const searchInput = document.querySelector('.searchBox input');
-searchInput.addEventListener('input', (event) => {
-  const searchText = event.target.value;
-  // Code to filter and display search results
-});
-
-// Functionality for chat box
-const chatBoxes = document.querySelectorAll('.chatBox');
-chatBoxes.forEach(chatBox => {
-  chatBox.addEventListener('click', () => {
-    // Code to open the clicked chat box and display messages
-  });
-});
-
-// Functionality for sending messages
-const sendMessage = () => {
-  const messageInput = document.querySelector('.typeChat input');
-  const message = messageInput.value;
-  // Code to send the message to the selected recipient
+// Function to handle form submission
+function handleSubmit(event) {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const username = formData.get('username');
+    const password = formData.get('password');
+    // Perform validation and submit data to server
 }
 
-// Functionality for handling hover effects
-const addHoverEffects = () => {
-  const categoryItems = document.querySelectorAll('.categoryItems ul li');
-  categoryItems.forEach(item => {
-    item.addEventListener('mouseover', () => {
-      item.style.color = 'blue';
-    });
-    item.addEventListener('mouseout', () => {
-      item.style.color = ''; // Revert to default color
-    });
-  });
-
-  const searchBoxInput = document.querySelector('.searchBox input');
-  searchBoxInput.addEventListener('mouseover', () => {
-    searchBoxInput.style.borderColor = 'blue';
-  });
-  searchBoxInput.addEventListener('mouseout', () => {
-    searchBoxInput.style.borderColor = ''; // Revert to default border color
-  });
-
-  const icons = document.querySelectorAll('.rightSide i');
-  icons.forEach(icon => {
-    icon.addEventListener('mouseover', () => {
-      icon.style.color = 'blue';
-    });
-    icon.addEventListener('mouseout', () => {
-      icon.style.color = ''; // Revert to default color
-    });
-  });
-
-  const recentChats = document.querySelectorAll('.recentChat');
-  recentChats.forEach(chat => {
-    chat.addEventListener('mouseover', () => {
-      chat.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
-    });
-    chat.addEventListener('mouseout', () => {
-      chat.style.backgroundColor = ''; // Revert to default background color
-    });
-  });
+// Function to handle mouseover event
+function handleMouseOver(event) {
+    event.target.style.backgroundColor = 'lightgray';
 }
 
-// Call the function to add hover effects
-addHoverEffects();
+// Function to handle mouseout event
+function handleMouseOut(event) {
+    event.target.style.backgroundColor = '';
+}
+
+// Function to show alert on button click
+function showAlert() {
+    alert('Button clicked!');
+}
+
+// Function to toggle visibility of password field
+function togglePasswordVisibility() {
+    const passwordInput = document.getElementById('password');
+    passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
+}
+
+// Function to validate email format
+function validateEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+}
+
+// Function to fetch data from API
+async function fetchData() {
+    try {
+        const response = await fetch('https://api.example.com/data');
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        return null;
+    }
+}
+
+// Function to dynamically create elements
+function createElements() {
+    const container = document.getElementById('container');
+    const newDiv = document.createElement('div');
+    newDiv.textContent = 'New div element';
+    container.appendChild(newDiv);
+}
+
+// Add event listeners
+document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+document.getElementById('submitForm').addEventListener('submit', handleSubmit);
+document.getElementById('button').addEventListener('mouseover', handleMouseOver);
+document.getElementById('button').addEventListener('mouseout', handleMouseOut);
+document.getElementById('button').addEventListener('click', showAlert);
+document.getElementById('showPassword').addEventListener('click', togglePasswordVisibility);
+
+// Call functions
+const email = 'example@example.com';
+console.log('Email validation result:', validateEmail(email));
+fetchData().then(data => console.log('Fetched data:', data));
+createElements();
