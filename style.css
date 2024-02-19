@@ -1,55 +1,53 @@
-*{
-    /* outline: 1px solid red; */
+* {
     padding: 0%;
     margin: 0%;
     font-family: "Fredoka", sans-serif;
 }
 
-.content{
+.content {
     display: flex;
 }
 
-ul{
+ul {
     list-style-type: none;
 }
 
-aside{
+aside {
     display: flex;
     flex-direction: column;
     width: 400px;
     border-right: 1px solid rgba(0, 0, 0, 0.301);
 }
 
-.logo{
+.logo {
     height: 70px;
     display: flex;
     align-items: center;
-    /* justify-content: center; */
     font-size: 20px;
     font-weight: 800;
     padding-left: 30px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.301);
 }
 
-.sideNav{
+.sideNav {
     display: flex;
     flex-direction: column;
     row-gap: 50px;
     padding: 40px 30px;
 }
 
-.category{
+.category {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-.categoryTitle{
+.categoryTitle {
     font-size: 13px;
     color: rgb(46, 46, 46);
 }
 
-.categoryItems ul{
+.categoryItems ul {
     display: flex;
     flex-direction: column;
     row-gap: 35px;
@@ -57,13 +55,18 @@ aside{
     font-weight: 500;
 }
 
-.categoryItems ul li i{
+.categoryItems ul li i {
     font-size: 18px;
     margin-right: 10px;
     width: 23px;
 }
 
-.topLayer{
+/* Add hover effect to category items */
+.categoryItems ul li:hover {
+    color: blue; /* Change text color on hover */
+}
+
+.topLayer {
     height: 70px;
     display: flex;
     padding: 0px 50px;
@@ -71,62 +74,69 @@ aside{
     border-bottom: 1px solid rgba(0, 0, 0, 0.301);
 }
 
-.searchBox{
+.searchBox {
     display: flex;
     align-items: center;
 }
 
-.searchBox input{
+/* Add hover effect to search box input */
+.searchBox input:hover {
+    border-color: blue; /* Change border color on hover */
+}
+
+.searchBox input {
     width: 500px;
     margin-left: 10px;
     border: none;
 }
 
-.rightSide{
+.rightSide {
     display: flex;
     align-items: center;
     column-gap: 15px;
-    column-gap: 20px;
 }
 
-.rightSide .circle{
+/* Add hover effect to icons in the right side */
+.rightSide i:hover {
+    color: blue; /* Change icon color on hover */
+}
+
+.rightSide .circle {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     overflow: hidden;
 }
 
-
-
-.rightSide .circle img{
+.rightSide .circle img {
     width: 60px;
 }
 
-.rightSide p i{
+.rightSide p i {
     margin-left: 10px;
 }
 
-.rightSide i{
+.rightSide i {
     color: rgb(77, 76, 76);
 }
 
-.bottomLayer{
+.bottomLayer {
     display: flex;
 }
 
-.bottomLeft{
+.bottomLeft {
     width: 400px;
     border-right: 1px solid rgba(0, 0, 0, 0.301);
     background-color: rgba(102, 102, 102, 0.068);
 }
 
-.chatNav{
+.chatNav {
     height: 70px;
     display: flex;
     border-bottom: 1px solid rgba(0, 0, 0, 0.301);
 }
 
-.chatNav ul{
+.chatNav ul {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -134,52 +144,52 @@ aside{
     column-gap: 10px;
 }
 
-.chatNav ul li{
+.chatNav ul li {
     height: 100%;
     display: flex;
     align-items: center;
     padding: 0% 5px;
 }
 
-.recipientPhoto{
+.recipientPhoto {
     border-radius: 50%;
     width: 60px;
     height: 60px;
     overflow: hidden;
 }
 
-.recipientPhoto img{
+.recipientPhoto img {
     width: 80px;
 }
 
-.recentChats{
+.recentChats {
     display: flex;
     flex-direction: column;
 }
 
-.recentChat{
+.recentChat {
     display: flex;
     column-gap: 15px;
     padding: 20px 20px;
 }
 
-.chatSummary{
+/* Add hover effect to chat summaries */
+.recentChat:hover {
+    background-color: rgba(0, 0, 0, 0.1); /* Change background color on hover */
+}
+
+.chatSummary {
     display: flex;
     flex-direction: column;
     justify-content: center;
     row-gap: 10px;
 }
 
-.chatSummary p:first-child{
+.chatSummary p:first-child {
     font-size: 20px;
 }
 
-/* .mainChat{
-
-
-} */
-
-.mainChattop{
+.mainChattop {
     display: flex;
     height: 70px;
     align-items: center;
@@ -189,93 +199,92 @@ aside{
     border-bottom: 1px solid rgba(0, 0, 0, 0.301);
 }
 
-.oneSide{
+.oneSide {
     display: flex;
-    align-items: center; 
+    align-items: center;
     column-gap: 15px;
 }
 
-.oneSide p{
+.oneSide p {
     font-size: 17px;
     font-weight: 600;
 }
 
-.otherSide{
+.otherSide {
     font-size: 20px;
     display: flex;
     align-items: center;
     column-gap: 20px;
 }
 
-.chatPane{
+.chatPane {
     display: flex;
     flex-direction: column;
     padding: 30px 70px;
     row-gap: 40px;
 }
 
-.chatBox{
+.chatBox {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
-.chatBox .p{
+.chatBox .p {
     background-color: rgba(0, 0, 0, 0.082);
     border-radius: 10px;
 }
 
-.mychatBox .p{
+.mychatBox .p {
     color: white;
     background-color: rgba(19, 3, 139, 0.623);
     border-radius: 10px;
 }
 
-.chatBoxHeader{
+.chatBoxHeader {
     display: flex;
     align-items: center;
     column-gap: 10px;
 }
 
-.chatBoxHeader .recipientPhoto{
+.chatBoxHeader .recipientPhoto {
     width: 40px;
     height: 40px;
 }
 
-.chatBoxHeader .recipientPhoto img{
+.chatBoxHeader .recipientPhoto img {
     width: 50px;
 }
 
-.p{
+.p {
     max-width: 500px;
     padding: 20px 20px;
 }
 
-.mychatBox{
+.mychatBox {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
     align-items: flex-end;
 }
 
-.typeChat{
+.typeChat {
     display: flex;
     align-items: center;
-    /* padding: 0px 40px; */
     position: absolute;
     width: 90%;
     left: 60px;
     bottom: 50%px;
 }
 
-.typeChat input{
+.typeChat input {
     width: 100%;
     margin-left: 10px;
     border: none;
     background-color: transparent;
 }
 
-.inputBox{
+.inputBox {
     display: flex;
     align-items: center;
     padding: 20px;
@@ -284,20 +293,20 @@ aside{
     border-radius: 4px;
 }
 
-.bottomMiddle{
+.bottomMiddle {
     position: relative;
     width: 900px;
 }
 
-.bottomRight{
+.bottomRight {
     width: 300px;
     border-left: 1px solid rgba(0, 0, 0, 0.301);
 }
 
-.profilePhoto{
+.profilePhoto {
     width: 148px;
     height: 148px;
-    border-radius: 50%;
+    border-radius: 50℅;
     overflow: hidden;
 }
 
@@ -307,7 +316,6 @@ aside{
     align-items: center;
     row-gap: 10px;
     margin-top: 50px;
-
 }
 
 .bottomRight .profilePane p:first-of-type{
